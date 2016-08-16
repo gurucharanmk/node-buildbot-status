@@ -36,13 +36,13 @@ gulp.task('lint', () => {
 
 
 gulp.task('babel', ['clean'], () => {
-  gulp.src('lib/**/*.js')
+  gulp.src('src/**/*.js')
     .pipe(babel())
-    .pipe(gulp.dest('src'));
+    .pipe(gulp.dest('lib'));
 });
 
 gulp.task('clean', () => {
-  del('src');
+  del('lib');
 });
 
 // gulp.task('test', function() {
